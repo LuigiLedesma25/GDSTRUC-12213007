@@ -1,6 +1,17 @@
 public class PlayerNode {
     private Player player;
     private PlayerNode next;
+    private PlayerNode previous; //next+prev = double-linked list
+
+    public PlayerNode getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(PlayerNode previous) {
+        this.previous = previous;
+    }
+
+
 
     public PlayerNode(Player player) {
         this.player = player;

@@ -6,7 +6,7 @@ public class Player {
     private int level;
 
     public Player(int id, String name, int level) {
-        this.id = id; //use 'this.' to refer to a spef variable if same name shows up
+        this.id = id;
         this.name = name;
         this.level = level;
     }
@@ -45,7 +45,7 @@ public class Player {
     }
 
     @Override
-    public boolean equals(Object o) { //required for boolean
+    public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Player player = (Player) o;
         return id == player.id && level == player.level && Objects.equals(name, player.name);
@@ -53,7 +53,6 @@ public class Player {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, level); //required for boolean
+        return Objects.hash(id, name, level);
     }
 }
-

@@ -49,20 +49,32 @@ public class Main {
         Hand.push(poppedItem); //add them back
         Deck.printStack();
         Hand.printStack();
+        int size = 30;
 
-        while(Deck.getSize() > 0){
+        while(true){
             randomNum = (int)(Math.random() * 2 + 1); //random choice of (3)
-            cardNum = (int)(Math.random() * 5 + 1); //random amt of 5
+            cardNum = (int)(Math.random() * 4 + 1); //random amt of 5
             if(randomNum == 1) {
                 System.out.println("\nYou drew " + cardNum + " cards from the Deck.");
-                for (int i = cardNum; i >= 0; i--) {
+                for (int i = cardNum; i > 0; i--) {
                     poppedItem = Deck.pop(); //remove top and set variable
                     Hand.push(poppedItem);
                 }
             }
+            if(randomNum == 2) {
+                System.out.println("\nYou discarded " + cardNum + " cards from the Hand.");
+                for (int i = cardNum; i > 0; i--) {
+                    poppedItem = Hand.pop(); //remove top and set variable
+                    Discard.push(poppedItem);
+                }
+            }
             System.out.println("\nDeck Contents");
+            Deck.printStack();
             System.out.println("\nHand Contents");
+            Hand.printStack();
             System.out.println("\nDiscard Contents");
+            Discard.printStack();
+            size = Deck.getSize();
             System.in.read();
         }
 

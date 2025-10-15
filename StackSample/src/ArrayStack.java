@@ -17,7 +17,7 @@ public class ArrayStack {
             System.arraycopy(stack, 0, newStack, 0, stack.length);
             stack = newStack;
         }
-
+        size++;
         stack[top++] = player;
     }
 
@@ -25,6 +25,7 @@ public class ArrayStack {
         if (isEmpty()) {
             return null;
         }
+        size--;
 
         return stack[--top];
     }

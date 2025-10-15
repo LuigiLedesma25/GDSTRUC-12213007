@@ -1,27 +1,27 @@
 import java.util.EmptyStackException;
 
-public class ArrayStack {
-    private Player[] stack;
+public class CardStack {
+    private Card[] stack;
     private int top;
     private int size = 0;
 
-    public ArrayStack(int capacity) {
-        stack = new Player[capacity];
+    public CardStack(int capacity) {
+        stack = new Card[capacity];
         top = 0;
     }
 
-    public void push(Player player) {
+    public void push(Card card) {
         // resize if array is full
         if (top == stack.length) {
-            Player[] newStack = new Player[stack.length * 2];
+            Card[] newStack = new Card[stack.length * 2];
             System.arraycopy(stack, 0, newStack, 0, stack.length);
             stack = newStack;
         }
 
-        stack[top++] = player;
+        stack[top++] = card;
     }
 
-    public Player pop() {
+    public Card pop() {
         if (isEmpty()) {
             return null;
         }
@@ -29,7 +29,7 @@ public class ArrayStack {
         return stack[--top];
     }
 
-    public Player peek() {
+    public Card peek() {
         if (isEmpty()) {
             return null;
         }
@@ -42,7 +42,7 @@ public class ArrayStack {
     }
 
     public void printStack() {
-        System.out.println("Printing stack...");
+        System.out.println("\nPrinting stack...");
 
         for (int i = top - 1; i >= 0; i--) {
             System.out.println(stack[i]);

@@ -7,8 +7,8 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.print("Hello and welcome! ");
 
-        Scanner reader = new Scanner(System.in);
-        String name = reader.next();
+        Scanner reader = new Scanner(System.in); //allow input
+        String name = reader.next(); //record input
 
         System.out.println("Testing: " + name);
     }

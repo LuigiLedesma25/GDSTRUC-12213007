@@ -32,5 +32,7 @@ public class Main {
         //check if player object is there
         boolean contains = playerList.contains(new Player(1, "Saitama", 999));
         System.out.println("\nList has Saitama? " + contains);
+
+
     }
 }

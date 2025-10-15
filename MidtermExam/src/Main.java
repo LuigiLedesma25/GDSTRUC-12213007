@@ -37,49 +37,66 @@ public class Main {
         CardStack Hand = new CardStack(30);
         CardStack Discard = new CardStack(30);
 
+        int randomNum;
+        int cardNum;
+        Card poppedItem;
+        int size = Deck.getSize();
         System.out.println("Deck Contents");
         Deck.printStack();
-        int randomNum = 0;
-        int cardNum = 0;
-        System.out.println(randomNum);
+        System.out.print("\nPress Enter to Continue:");
         System.in.read(); //Press Enter to cont.
-
-        System.out.println("Remove top card from Deck. ");
-        Card poppedItem = Deck.pop(); //remove top and set variable
-        Hand.push(poppedItem); //add them back
-        Deck.printStack();
-        Hand.printStack();
-        int size = 30;
-
+        //Set Loop
         while(true){
-            randomNum = (int)(Math.random() * 2 + 1); //random choice of (3)
+            randomNum = (int)(Math.random() * 3 + 1); //random choice of 3
             cardNum = (int)(Math.random() * 4 + 1); //random amt of 5
             if(randomNum == 1) {
-                System.out.println("\nYou drew " + cardNum + " cards from the Deck.");
+                System.out.println("\nYou drew " + cardNum + " cards from the Deck."); //Draw
+                if(cardNum > size) {
+                    cardNum = size;
+                }
                 for (int i = cardNum; i > 0; i--) {
                     poppedItem = Deck.pop(); //remove top and set variable
                     Hand.push(poppedItem);
                 }
             }
-            if(randomNum == 2) {
-                System.out.println("\nYou discarded " + cardNum + " cards from the Hand.");
-                for (int i = cardNum; i > 0; i--) {
-                    poppedItem = Hand.pop(); //remove top and set variable
-                    Discard.push(poppedItem);
+            else if(randomNum == 2) {
+                System.out.println("\nYou discarded " + cardNum + " cards from the Hand."); //Discard
+                if(cardNum > Hand.getSize()) {
+                    System.out.println("\nHand count is too small. Skipping action.");
+                }
+                else{
+                    for (int i = cardNum; i > 0; i--) {
+                        poppedItem = Hand.pop(); //remove top and set variable
+                        Discard.push(poppedItem);
+                    }
                 }
             }
-            System.out.println("\nDeck Contents");
-            Deck.printStack();
+            else{
+                System.out.println("\nYou retrieved " + cardNum + " cards from the Discard."); //Retrieve
+                if(cardNum > Discard.getSize()) {
+                    System.out.println("\nDiscard pile is too small. Skipping action.");
+                }
+                else{
+                    for (int i = cardNum; i > 0; i--) {
+                        poppedItem = Discard.pop(); //remove top and set variable
+                        Hand.push(poppedItem);
+                    }
+                }
+            }
+            //Print Results
+            System.out.println("\nDeck Count: " + Deck.getSize());
             System.out.println("\nHand Contents");
             Hand.printStack();
-            System.out.println("\nDiscard Contents");
-            Discard.printStack();
+            System.out.println("\nDiscard Count " + Discard.getSize());
+            //End Loop
             size = Deck.getSize();
+            if(size <= 0) {
+                break;
+            }
+            System.out.print("\nPress Enter to Continue:");
             System.in.read();
         }
 
-
-
-
+        System.out.println("\nDeck is now empty.");
     }
 }

@@ -17,7 +17,7 @@ public class CardStack {
             System.arraycopy(stack, 0, newStack, 0, stack.length);
             stack = newStack;
         }
-
+        size++;
         stack[top++] = card;
     }
 
@@ -25,7 +25,7 @@ public class CardStack {
         if (isEmpty()) {
             return null;
         }
-
+        size--;
         return stack[--top];
     }
 
@@ -42,7 +42,6 @@ public class CardStack {
     }
 
     public void printStack() {
-        System.out.println("\nPrinting stack...");
 
         for (int i = top - 1; i >= 0; i--) {
             System.out.println(stack[i]);

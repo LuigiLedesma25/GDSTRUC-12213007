@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println("\nElement at key " + celebi.getUserName() + " = " + hashtable.get(celebi.getUserName()));
 
-        hashtable.remove(String.valueOf(1));
+        hashtable.remove(pikachu.getUserName());
 
         hashtable.printHashtable();
     }

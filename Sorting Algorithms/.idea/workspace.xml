@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9133b628-2c80-4e87-bf72-12b93a4cda67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../MidtermExam/src/CardStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MidtermExam/src/CardStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MidtermExam/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MidtermExam/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Quiz 4 Hashtables/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Quiz 4 Hashtables/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Quiz 4 Hashtables/src/SimpleHashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Quiz 4 Hashtables/src/SimpleHashTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,18 +31,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ysobel/Downloads/GDSTRUC Projects/GDSTRUC-12213007/Sorting Algorithms"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ysobel/Downloads/GDSTRUC Projects/GDSTRUC-12213007/Sorting Algorithms&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9133b628-2c80-4e87-bf72-12b93a4cda67" name="Changes" comment="" />

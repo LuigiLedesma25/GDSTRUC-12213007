@@ -38,7 +38,7 @@ public class SimpleHashTable {
     }
 
     public void put(String key, Player value){ //encode
-        int hashedKey = hashKey(key);
+        int hashedKey = hashKey(key); //making new key
 
         //performin linear probing, required for exact results
         if (isOccupied(hashedKey)){
@@ -64,7 +64,7 @@ public class SimpleHashTable {
         }
     }
     public Player get(String key) {
-        int hashedKey = hashKey(key);
+        int hashedKey = findKey(key);
 
         if (hashedKey == -1){
             return null;
@@ -72,7 +72,16 @@ public class SimpleHashTable {
 
         return hashtable[hashedKey].getValue();
     }
-
+    public Player remove(String key){
+        int hashedKey = findKey(key); //use find for existing elements. Already has linear
+        //key not found
+        if (hashedKey == -1){ //if false then findKey already sets to -1
+            return null;
+        }
+        Player removedPlayer = hashtable[hashedKey].getValue();
+        hashtable[hashedKey] = null;
+        return removedPlayer;
+    }
 
     public void printHashtable() {
         for (int i = 0; i < hashtable.length; i++) {
@@ -82,29 +91,8 @@ public class SimpleHashTable {
                 player = hashtable[i].getValue();
             }
 
-            System.out.println("Element " + i + " = " + hashtable[i]);
+            System.out.println("Element " + i + " = " + player);
         }
     }
 
-    public Player remove(String key) {
-        int hashedKey = hashKey(key);
-
-        //performin linear probing, required for exact results
-        if (isOccupied(hashedKey)){
-            int stoppingIndex = hashedKey;
-
-            if (hashedKey == hashtable.length - 1) { //hashed key is at end of array
-                hashedKey = 0;
-            }
-            else {
-                hashedKey++;
-            }
-
-            while (hashedKey != stoppingIndex && hashtable[hashedKey] != null){
-                hashedKey = (hashedKey + 1) % hashtable.length;
-            }
-        }
-
-        return null;
-    }
 }

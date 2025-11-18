@@ -58,15 +58,15 @@ public class Node {
         }
     }
 
-    public void inOrderTraverse() {
-        if (leftChild != null) {
-            leftChild.inOrderTraverse();
+    public void inOrderTraverseDescending() {
+        if (rightChild != null) {
+            rightChild.inOrderTraverseDescending();
         }
 
         System.out.println("Traversed: " + this);
 
-        if (rightChild != null) {
-            rightChild.inOrderTraverse();
+        if (leftChild != null) {
+            leftChild.inOrderTraverseDescending();
         }
     }
 

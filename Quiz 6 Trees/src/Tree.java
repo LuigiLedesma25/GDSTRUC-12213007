@@ -10,9 +10,9 @@ public class Tree {
         }
     }
 
-    public void inOrderTraverse() {
+    public void inOrderTraverseDescending() {
         if (root != null) {
-            root.inOrderTraverse();
+            root.inOrderTraverseDescending();
         }
     }
 
@@ -23,4 +23,5 @@ public class Tree {
 
         return  root.get(value);
     }
+
 }

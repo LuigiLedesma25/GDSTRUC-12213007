@@ -11,7 +11,7 @@ public class Main {
         bst.insert(22);
         bst.insert(32);
 
-        bst.inOrderTraverse();
+        bst.inOrderTraverseDescending();
 
         int value = 100;
         System.out.println("Node with value " + value + " - " + bst.get(value));
